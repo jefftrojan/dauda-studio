@@ -1,0 +1,18 @@
+.NavbarItems {
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar-logo {
+    color: #fff;
+    justify-self: start;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+.fa-sharp fa-solid fa-robot {
+    margin-left: 0.5rem;
+}
