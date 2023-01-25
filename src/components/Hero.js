@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import  {motion} from 'framer-motion'
+import  {motion} from 'framer-motion';
+import OuterSpace1 from '../images/Outer-space.svg';
+import OuterSpace2 from '../images/Taken.svg';
+import OuterSpace3 from '../images/illustration5.svg';
+
 
 const Section = styled.section`
 height: 100vh;
@@ -52,6 +56,11 @@ outline: none;
 background: transparent;
 
 `;
+
+const Image = styled.img`
+
+`;
+
 const ColumnRight = styled.div``;
 
 
@@ -66,7 +75,9 @@ const Hero = () => {
             </ColumnLeft>
 
             <ColumnRight>
-
+              
+              <Image src={OuterSpace2} alt='planet' />
+              
             </ColumnRight>
         </Container>
     </Section>
