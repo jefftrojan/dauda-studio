@@ -13,6 +13,25 @@
     margin-left: 20px;
 
 }
-.fa-sharp fa-solid fa-robot {
+.fa-robot {
     margin-left: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+
+
+}
+
+.nav-links {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
 }

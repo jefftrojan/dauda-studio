@@ -4,17 +4,23 @@ import './Navbar.css'
 
 
 class Navbar extends Component{
+    state = {isActive: false}
+
+    handleClick = () => {
+        this.setState({isActive: !this.state.isActive})
+    }
+
     render(){
         return (
             <nav className="NavbarItems">
                 <h1 className='navbar-logo'>
                 J3ff <i class="fa-sharp fa-solid fa-robot"></i>
                 </h1>
-                <div className='menu-icon'>
-
+                <div className='menu-icon' onClick={this.handleClick}>
+                    <i className={this.state.isActive ? 'fas fa-xmark' : 'fas fa-bars-staggered'}></i>
 
                 </div>
-                <ul>
+                <ul className={this.state.isActive ? 'nav-menu active': "nav-menu"}>
                     {MenuItems.map((item, index) => {
                         return (
 
