@@ -14,7 +14,7 @@ class Navbar extends Component{
         return (
             <nav className="NavbarItems">
                 <h1 className='navbar-logo'>
-                J3ff <i class="fa-sharp fa-solid fa-robot"></i>
+                J3ff 
                 </h1>
                 <div className='menu-icon' onClick={this.handleClick}>
                     <i className={this.state.isActive ? 'fas fa-xmark' : 'fas fa-bars-staggered'}></i>
