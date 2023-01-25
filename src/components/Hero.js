@@ -27,10 +27,31 @@ display: flex;
 flex-direction: column;
 color: #fff;
 justify-content: center;
+align-items: center;
+padding: 5rem 2rem;
+
+h1{
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  
+}
+p {
+  margin: 2rem 0;
+  font-size: 4rem;
+  line-height: 1.1;
+}
 
 
 `;
-const Button = styled.div``;
+const Button = styled.div`
+padding: 1rem 3rem;
+font-size: 1rem;
+border: 2px solid #fff;
+border-radius: 12px;
+outline: none;
+background: transparent;
+
+`;
 const ColumnRight = styled.div``;
 
 
