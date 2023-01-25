@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import  {motion} from 'framer-motion';
-import OuterSpace1 from '../images/Outer-space.svg';
 import OuterSpace2 from '../images/Taken.svg';
-import OuterSpace3 from '../images/illustration5.svg';
+
 
 
 const Section = styled.section`
@@ -46,6 +45,7 @@ and (orientation: portrait) {
   
   grid-grid-template-columns: 1fr;
   
+  
 }
  
 /* For Mobile Landscape View */
@@ -54,12 +54,14 @@ and (orientation: landscape) {
   
   grid-grid-template-columns: 1fr;
   
+  
 }
  
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
   
   grid-grid-template-columns: 1fr;
+ 
   
 }
  
@@ -123,8 +125,8 @@ const Image = styled(motion.img)`
 position: absolute;
 width: 100%;
 height: 100%;
-max-width: 250px;
-max-height: 250px;
+max-width: 100;
+max-height: 150;
 
 `;
 
@@ -136,14 +138,12 @@ padding: 2rem;
 position: relative;
 
 ${Image}:nth-child(1) {
-  top:10px;
-  left:10px;
+  bottom: 50px;
+  right:40px;
+
+
 }
 
-${Image}:nth-child(2) {
-  top:170px;
-  right:10px;
-}
 `;
 
 
@@ -156,18 +156,21 @@ const Hero = () => {
     <Section>
         <Container>
             <ColumnLeft>
-                <motion.h1  
+                <motion.h3  
                 initial={{opacity:0}}
                 animate={{opacity:1}}
                 transition={{duration:1}}
-                >Hey, I'm Jeff Dauda!</motion.h1>
+                > 
+                * My name is J3ff Dauda and this is my studio
+                </motion.h3>
                 <motion.p
                 variants={Left_fade}
                 initial='hidden'
                 animate='visible'
                 transition={{duration:1}}
                 
-                >Welcome to my studio</motion.p>
+                >Site under repair &#128521;
+                </motion.p>
                 <Button
                 whileHover={{scale:1.15}}
                 whileTap={{scale:0.95, backgroundColor: '#67F6E7', border: 'none', color: '#808'}}
@@ -177,26 +180,19 @@ const Hero = () => {
                 
 
 
-                >Let's go!!</Button>
+                >Refresh!!</Button>
             </ColumnLeft>
 
             <ColumnRight>
               
-              <Image src={OuterSpace2} alt='planet' 
+              <Image src={OuterSpace2} alt='hero image' 
               whileTap={{scale:1.9}} drag={true}
               dragConstraints={{left:0, right:250, top:0, bottom:80}}
-              initial={{opacity:0, y:-100}}
+              initial={{opacity:1, y:-100}}
               animate={{opacity:1, y:0, transition: {duration:1}}}
                
                
                />
-              <Image src={OuterSpace1} alt='planet' whileTap={{scale:2.2}} 
-              drag={true}
-              dragConstraints={{left:50, right:0, top:0, bottom:80}}
-              initial={{opacity:0, x:-100}}
-              animate={{opacity:1, x:0, transition: {duration:1}}}
-              
-              />
               
               
             </ColumnRight>
