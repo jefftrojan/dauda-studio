@@ -192,9 +192,9 @@ const Hero = () => {
                />
               <Image src={OuterSpace1} alt='planet' whileTap={{scale:2.2}} 
               drag={true}
-              dragConstraints={{left:0, right:250, top:0, bottom:80}}
-              initial={{opacity:0, y:-100}}
-              animate={{opacity:1, y:0, transition: {duration:1}}}
+              dragConstraints={{left:50, right:0, top:0, bottom:80}}
+              initial={{opacity:0, x:-100}}
+              animate={{opacity:1, x:0, transition: {duration:1}}}
               
               />
               
