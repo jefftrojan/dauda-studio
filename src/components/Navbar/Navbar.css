@@ -44,7 +44,7 @@
 }
 
 .fa-bars-staggered {
-    color:#100606;
+    color:aliceblue;
 
 }
 .nav-links-mobile {
@@ -59,6 +59,7 @@
         position: relative;
     }
     .nav-menu {
+        color: aliceblue;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -71,13 +72,15 @@
 
     }
     .nav-menu.active{
-        background: aliceblue;
+        
+        background: rgb(18, 19, 19);
         left:0;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
     }
     .nav-links {
+        color: aliceblue;
         text-align: center;
         padding: 2rem;
         width: 100%;
@@ -104,6 +107,23 @@
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
+    }
+    .fa-xmark {
+        color: aliceblue;
+        font-size: 2rem;
+
+    }
+    .nav-links-mobile{
+        display: block;
+        text-align: center;
+        margin: 2rem auto;
+        border-radius: 8px;
+        width: 80%;
+    }
+    .nav-links-mobile:hover{
+        background: #fff;
+        color:#100606;
+        transition: 250ms;
     }
 }
 
