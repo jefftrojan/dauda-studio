@@ -119,7 +119,7 @@ background: transparent;
 color: #fff
 `;
 
-const Image = styled.img`
+const Image = styled(motion.img)`
 position: absolute;
 width: 100%;
 height: 100%;
@@ -170,7 +170,11 @@ const Hero = () => {
                 >Welcome to my studio</motion.p>
                 <Button
                 whileHover={{scale:1.15}}
-                whileTap={{scale:0.95}}
+                whileTap={{scale:0.95, backgroundColor: '#67F6E7', border: 'none', color: '#808'}}
+
+                initial={{opacity:0}}
+                animate={{opacity:1,transition: {duration:1} }}
+                
 
 
                 >Let's go!!</Button>
@@ -178,8 +182,21 @@ const Hero = () => {
 
             <ColumnRight>
               
-              <Image src={OuterSpace2} alt='planet' />
-              <Image src={OuterSpace1} alt='planet' />
+              <Image src={OuterSpace2} alt='planet' 
+              whileTap={{scale:1.9}} drag={true}
+              dragConstraints={{left:0, right:250, top:0, bottom:80}}
+              initial={{opacity:0, y:-100}}
+              animate={{opacity:1, y:0, transition: {duration:1}}}
+               
+               
+               />
+              <Image src={OuterSpace1} alt='planet' whileTap={{scale:2.2}} 
+              drag={true}
+              dragConstraints={{left:0, right:250, top:0, bottom:80}}
+              initial={{opacity:0, y:-100}}
+              animate={{opacity:1, y:0, transition: {duration:1}}}
+              
+              />
               
               
             </ColumnRight>
