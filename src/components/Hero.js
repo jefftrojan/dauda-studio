@@ -161,7 +161,7 @@ const Hero = () => {
                 animate={{opacity:1}}
                 transition={{duration:1}}
                 > 
-                * My name is J3ff Dauda and this is my studio
+                * My name is J3ff Dauda and this is my world
                 </motion.h3>
                 <motion.p
                 variants={Left_fade}
@@ -186,10 +186,10 @@ const Hero = () => {
             <ColumnRight>
               
               <Image src={OuterSpace2} alt='hero image' 
-              whileTap={{scale:1.9}} drag={true}
-              dragConstraints={{left:0, right:250, top:0, bottom:80}}
-              initial={{opacity:1, y:-100}}
-              animate={{opacity:1, y:0, transition: {duration:1}}}
+              whileTap={{scale:1}} drag={true}
+              dragConstraints={{left:0, right:125, top:0, bottom:80}}
+              initial={{opacity:0, y:-100}}
+              animate={{opacity:1, y:0, transition: {duration:0.5}}}
                
                
                />
