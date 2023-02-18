@@ -1,115 +1,144 @@
-.cube {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg);
-    animation: animateD 8s linear infinite;
+.loader {
+  background-color: black;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform-origin: center;
+  transition: 1s;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 10px purple,
+  inset 5px 5px 12px rgba(44, 0, 114, 0.8),
+  inset 8px 8px 1px rgba(160, 120, 255, 0.7),
+  0px 0px 1px rgba(160, 120, 255, 0.6);
+  animation: 1.2s linear infinite 0s running first682;
+}
+
+.loader div {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+#first {
+  transform: rotate(90deg)
+}
+
+#first::before {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+  0px 0px 2px white;
+  border-radius: 50px;
+  animation: 0.8s ease-in 0s infinite running jump2;
+}
+
+#second {
+  transform: rotate(90deg);
+}
+
+#second::before {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+  0px 0px 2px white;
+  border-radius: 50px;
+  animation: 1.5s ease-in 0s infinite running jump2;
+}
+
+#third {
+  transform: rotate(90deg)
+}
+
+#third::before {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+  0px 0px 2px white;
+  border-radius: 50px;
+  animation: 1.6s ease-in 0s infinite running jump2;
+}
+
+.loader::after {
+  --width: 1em;
+  --height: 1em;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% - var(--width)/2);
+  width: 1em;
+  height: 1em;
+  background-color: rgb(44, 0, 114);
+  box-shadow: inset 5px 5px 10px rgb(160, 120, 255),
+  0px 0px 2px white;
+  border-radius: 50px;
+  animation: 1.2s ease-in 1s alternate infinite running jump2;
+}
+
+@keyframes first682 {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @keyframes animateD {
-    0% {
-      transform: rotateX(-15deg) rotateY(0deg);
-    }
-  
-    100% {
-      transform: rotateX(-15deg) rotateY(-360deg);
-    }
+
+  25% {
+    transform: rotate(0deg);
+    transform: rotate(90deg)
   }
-  
-  .cube div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
+
+  50% {
+    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
-  
-  .cube2 {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    transform-style: preserve-3d;
-    animation: animateD2 5s ease-out infinite alternate;
+
+  75% {
+    transform: rotate(180deg);
+    transform: rotate(270deg)
   }
-  
-  @keyframes animateD2 {
-    0% {
-      transform: rotateX(0deg) rotateY(0deg);
-    }
-  
-    100% {
-      transform: rotateX(180deg) rotateY(-360deg);
-    }
+
+  100% {
+    transform: rotate(270deg);
+    transform: rotate(360deg);
   }
-  
-  .cube2 div {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 65%;
-    height: 65%;
-    transform-style: preserve-3d;
+}
+
+@keyframes jump2 {
+  0% {
+    top: 100%;
   }
-  
-  .cube2 div span {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: 65%;
-    height: 65%;
-    background: transparent;
-    border: 2px solid #7dff99;
-    transform: rotateY(calc(90deg * var(--i))) translateZ(62px);
+
+  25% {
+    top: 230%
   }
-  
-  .cube3 {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg);
-    animation: animateD3 1s ease-in-out infinite alternate;
+
+  50% {
+    top: 100%;
   }
-  
-  @keyframes animateD3 {
-    0% {
-      transform: rotateX(-90deg) rotateY(0deg);
-    }
-  
-    100% {
-      transform: rotateX(90deg) rotateY(45deg);
-    }
+
+  75% {
+    height: 0.6em
   }
-  
-  .cube3 div {
-    position: absolute;
-    top: 70px;
-    left: 70px;
-    width: 15%;
-    height: 15%;
-    transform-style: preserve-3d;
+
+  100% {
+    height: 1em
   }
-  
-  .cube3 div span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #7dff99;
-    transform: rotateY(calc(90deg * var(--i))) translateZ(14px);
-    box-shadow: 0px 0px 7px #7dff99;
-  }
-  
-  .top3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #7dff99;
-    transform: rotateX(90deg) translateZ(14px);
-    box-shadow: 0px 0px 10px #7dff99;
-  }
-  
-  
+}

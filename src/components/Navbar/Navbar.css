@@ -4,10 +4,11 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    background-color: #100606;
 }
 
 .navbar-logo {
-    color: #100606;
+    color: #fff;
     justify-self:start;
     cursor: pointer;
     margin-left: 15px;
@@ -31,7 +32,7 @@
 }
 
 .nav-links {
-    color: black;
+    color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }

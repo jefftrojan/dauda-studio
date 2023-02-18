@@ -186,7 +186,7 @@ const Hero = () => {
             <ColumnRight>
               
               <Image src={OuterSpace2} alt='hero image' 
-              whileTap={{scale:1}} drag={true}
+              whileTap={{scale:1}} drag={false}
               dragConstraints={{left:0, right:125, top:0, bottom:80}}
               initial={{opacity:0, y:-100}}
               animate={{opacity:1, y:0, transition: {duration:0.5}}}

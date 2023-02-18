@@ -2,41 +2,23 @@ import React from 'react';
 import './Loader.css'
 
 function Loader() {
+    
+
+
   return (
+    
+    
 
-    <div class="cube">
-  <div class="topD"></div>
-  <div>
-    <span style="--i:0"></span>
-    <span style="--i:1"></span>
-    <span style="--i:2"></span>
-    <span style="--i:3"></span>
-  </div>
-
-  <div class="cube2">
-    <div>
-      <span style="--i:0"></span>
-      <span style="--i:1"></span>
-      <span style="--i:2"></span>
-      <span style="--i:3"></span>
+   <div class="loader">
+    <div id="first">
+        <div id="second">
+            <div id="third">
+            </div>
+        </div>
     </div>
-
-    <div class="cube3">
-      <div class="top3"></div>
-      <div>
-        <span style="--i:0"></span>
-        <span style="--i:1"></span>
-        <span style="--i:2"></span>
-        <span style="--i:3"></span>
-      </div>
-
-    </div>
-
-  </div>
 </div>
-
    
   )
 }
 
-export default Blog
+export default Loader;
